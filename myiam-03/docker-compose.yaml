@@ -30,3 +30,10 @@ services:
         - JOSSO_SKIP_ADMIN_CREATE=false
     networks:
       - myiam-03-net
+
+  nginx:
+    build: nginx
+    ports:
+      - '1234:80'
+    networks:
+      - myiam-03-net

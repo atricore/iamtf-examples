@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features  name="atricore-iamtf-extensions-1.0.0-SNAPSHOT">
+
+    <!-- Add custom extensions here -->
+    <!-- extension URI must be mvn:<groupId>/<artifactId>/<version> -->
+
+    <feature name="iamtf-extensions" version="1.0.0-SNAPSHOT">
+        <bundle>mvn:org.atricore.idbus.examples/org.atricore.idbus.examples.custom-identity-source-db/1.6.0</bundle>
+    </feature>
+    
+</features>

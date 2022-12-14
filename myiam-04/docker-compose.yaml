@@ -1,0 +1,36 @@
+version: '3.8'
+
+networks:
+  myiam-04-net:
+    driver: bridge
+
+services:
+  db:
+    build: mariadb
+    ports:
+      - 3306:3306
+    environment:
+      - MARIADB_ROOT_PASSWORD=secret
+    networks:
+      - myiam-04-net
+
+  iamtf:
+    build: iamtf
+    ports:
+      - '8081:8081'
+      - '8101:8101'
+    environment:
+        - JOSSO_CLIENT_ID=idbus-f2f7244e-bbce-44ca-8b33-f5c0bde339f7
+        - JOSSO_CLIENT_SECRET=7oUHlv(HLT%vxK4L
+        - JOSSO_ADMIN_USR=myadmin
+        - JOSSO_ADMIN_PWD=changeme
+        - JOSSO_SKIP_ADMIN_CREATE=false
+    networks:
+      - myiam-04-net
+
+  nginx:
+    build: nginx
+    ports:
+      - '1234:80'
+    networks:
+      - myiam-04-net

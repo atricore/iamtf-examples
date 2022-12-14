@@ -1,7 +1,7 @@
 version: '3.8'
 
 networks:
-  myiam-03-net:
+  myiam-04-net:
     driver: bridge
 
 services:
@@ -15,7 +15,7 @@ services:
         - LDAP_ADMIN_PASSWORD=secret
         - LDAP_ROOT=dc=devsso1,dc=atricore,dc=com
       networks:
-        - myiam-03-net
+        - myiam-04-net
 
   iamtf:
     image: atricore/iamtf:unstable
@@ -29,11 +29,11 @@ services:
         - JOSSO_ADMIN_PWD=changeme
         - JOSSO_SKIP_ADMIN_CREATE=false
     networks:
-      - myiam-03-net
+      - myiam-04-net
 
   nginx:
     build: nginx
     ports:
       - '1234:80'
     networks:
-      - myiam-03-net
+      - myiam-04-net

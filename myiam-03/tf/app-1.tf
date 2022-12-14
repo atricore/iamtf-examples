@@ -1,6 +1,6 @@
 // partner application #1
 resource "iamtf_app_oidc" "partnerapp1" {
-  ida  = iamtf_identity_appliance.myiam-03.name
+  ida  = iamtf_identity_appliance.myiam-04.name
   name = "partnerapp1"
 
   client_id = "m03-cli01"

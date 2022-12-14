@@ -14,8 +14,8 @@ provider "iamtf" {
   client_secret = "7oUHlv(HLT%vxK4L"
 }
 
-resource "iamtf_identity_appliance" "myiam-03" {
-  name        = "myiam-03"
+resource "iamtf_identity_appliance" "myiam-04" {
+  name        = "myiam-04"
   namespace   = "com.atricore.devsso"
   description = "Appliance #1"
   location    = "http://localhost:8081"

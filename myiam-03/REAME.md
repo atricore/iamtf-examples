@@ -1,4 +1,4 @@
-# IAM.tf example: myiam-03
+# IAM.tf example: myiam-04
 
 # Prerequisites
 
@@ -27,7 +27,7 @@ terraform apply
 # Start the appliance
 
 ```
-export JOSSO_API_APPLIANCE=myiam-03
+export JOSSO_API_APPLIANCE=myiam-04
 export JOSSO_API_CLIENT_ID=idbus-f2f7244e-bbce-44ca-8b33-f5c0bde339f7
 export JOSSO_API_SECRET=7oUHlv(HLT%vxK4L
 export JOSSO_API_ENDPOINT=http://localhost:8081/atricore-rest/services
@@ -35,7 +35,7 @@ export JOSSO_API_ENDPOINT=http://localhost:8081/atricore-rest/services
 iamtfctl start
 iamtfctl list appliances
 ID        NAME       STATE     LOCATION
-1         myiam-03   STARTED   http://localhost:8081/IDBUS/myiam-03
+1         myiam-04   STARTED   http://localhost:8081/IDBUS/myiam-04
 ```
 # Test it!
 

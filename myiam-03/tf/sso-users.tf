@@ -1,5 +1,5 @@
 resource "iamtf_idsource_ldap" "sso-users" {
-    ida             = iamtf_identity_appliance.myiam-04.name
+    ida             = iamtf_identity_appliance.myiam-03.name
     name            = "sso-users"
     provider_url    = "ldap://openldap:1389"
     username        = "cn=admin,dc=devsso1,dc=atricore,dc=com"

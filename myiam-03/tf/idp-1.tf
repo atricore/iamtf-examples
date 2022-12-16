@@ -1,5 +1,5 @@
 resource "iamtf_idp" "idp-1" {
-  ida  = iamtf_identity_appliance.myiam-04.name
+  ida  = iamtf_identity_appliance.myiam-03.name
   name = "idp-1"
 
   keystore {

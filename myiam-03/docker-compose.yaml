@@ -18,24 +18,22 @@ services:
         - myiam-03-net
 
   iamtf:
-    image: atricore/iamtf:fast
+    image: atricore/iamtf:unstable
     ports:
       - '8081:8081'
       - '8101:8101'
-      - '5005:5005'
     environment:
         - JOSSO_CLIENT_ID=idbus-f2f7244e-bbce-44ca-8b33-f5c0bde339f7
         - JOSSO_CLIENT_SECRET=7oUHlv(HLT%vxK4L
         - JOSSO_ADMIN_USR=myadmin
         - JOSSO_ADMIN_PWD=changeme
         - JOSSO_SKIP_ADMIN_CREATE=false
-        - KARAF_DEBUG=true
     networks:
       - myiam-03-net
 
   nginx:
     build: nginx
     ports:
-      - '1234:80'
+      - '3000:80'
     networks:
       - myiam-03-net

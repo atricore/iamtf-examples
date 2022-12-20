@@ -31,6 +31,6 @@ services:
   nginx:
     build: nginx
     ports:
-      - '1234:80'
+      - '3000:80'
     networks:
       - myiam-04-net

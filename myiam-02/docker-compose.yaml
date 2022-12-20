@@ -18,7 +18,7 @@ services:
         - myiam-02-net
 
   iamtf:
-    image: atricore/iamtf:latest
+    image: atricore/iamtf:unstable
     ports:
       - '8081:8081'
       - '8101:8101'

@@ -22,12 +22,13 @@ resource "iamtf_idp" "idp-1" {
 
     saml_authn_ctx    = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
     referrals         = "follow"
-    operational_attrs = true
+    operational_attrs = false
 
   }
 
   oidc {
     enabled = true
+    user_claims_in_access_token = false
   }
 
   id_sources = [iamtf_idsource_ldap.sso-users.name]

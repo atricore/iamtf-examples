@@ -14,6 +14,19 @@ dn: ou=groups,dc=devsso1,dc=atricore,dc=com
 objectClass: organizationalUnit
 ou: groups
 
+dn: uid=admin,ou=users,dc=devsso1,dc=atricore,dc=com
+objectClass: shadowAccount
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: Administrator
+gidNumber: 1000
+homeDirectory: /home/admin
+sn: Bar1
+uid: admin
+uidNumber: 1000
+userPassword: atricore
+mail: admin@atricore.com
+
 dn: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com
 objectClass: shadowAccount
 objectClass: posixAccount
@@ -50,3 +63,20 @@ dn: cn=role2,ou=groups,dc=devsso1,dc=atricore,dc=com
 objectClass: groupOfNames
 cn: role2
 member: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com
+
+dn: cn=admin,ou=groups,dc=devsso1,dc=atricore,dc=com
+objectClass: groupOfNames
+cn: admin
+member: uid=admin,ou=users,dc=devsso1,dc=atricore,dc=com
+
+dn: cn=staff,ou=groups,dc=devsso1,dc=atricore,dc=com
+objectClass: groupOfNames
+cn: staff
+member: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com
+
+dn: cn=baseuser,ou=groups,dc=devsso1,dc=atricore,dc=com
+objectClass: groupOfNames
+cn: baseuser
+member: uid=admin,ou=users,dc=devsso1,dc=atricore,dc=com
+member: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com
+member: uid=user2,ou=users,dc=devsso1,dc=atricore,dc=com

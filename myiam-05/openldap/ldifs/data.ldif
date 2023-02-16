@@ -1,0 +1,52 @@
+version: 1
+
+dn: dc=devsso1,dc=atricore,dc=com
+objectClass: organization
+objectClass: dcObject
+dc: devsso1
+o: sso
+
+dn: ou=users,dc=devsso1,dc=atricore,dc=com
+objectClass: organizationalUnit
+ou: users
+
+dn: ou=groups,dc=devsso1,dc=atricore,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com
+objectClass: shadowAccount
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: User1
+gidNumber: 1000
+homeDirectory: /home/user1
+sn: Bar1
+uid: user1
+uidNumber: 1000
+userPassword: user1pwd
+mail: user1@atricore.com
+
+dn: uid=user2,ou=users,dc=devsso1,dc=atricore,dc=com
+objectClass: shadowAccount
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: User2
+gidNumber: 1001
+homeDirectory: /home/user2
+sn: Bar2
+uid: user2
+uidNumber: 1001
+userPassword: user2pwd
+mail: user2@atricore.com
+
+dn: cn=role1,ou=groups,dc=devsso1,dc=atricore,dc=com
+objectClass: groupOfNames
+cn: role1
+member: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com
+member: uid=user2,ou=users,dc=devsso1,dc=atricore,dc=com
+
+dn: cn=role2,ou=groups,dc=devsso1,dc=atricore,dc=com
+objectClass: groupOfNames
+cn: role2
+member: uid=user1,ou=users,dc=devsso1,dc=atricore,dc=com

@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     iamtf = {
-      version = "~> 0.6.0"
+      version = "~> 0.6.3"
       source  = "atricore/iamtf"
     }
   }
